@@ -1,0 +1,36 @@
+<h2>{{title}}</h2>
+
+<form (submit)='eventSearchAuthors()'>
+
+  <input type="search"
+  placeholder="Please input author code to search"
+  [(ngModel)]="authorCode"
+  autocomplete="off"
+  name="textAuthorCode" />
+
+  <input type='submit' value='Search' />
+
+  <br>
+
+  <span *ngIf="errorMessage" style="color:red">{{ errorMessage }}</span>
+
+  <summary>
+    <div class='author-detail' *ngIf='authorDetails'>
+      <strong>Author Name: </strong>
+      <span>{{ authorDetails?.name }}</span>
+      <span *ngIf='authorDetails?.death_date'>&nbsp;(dead)</span>
+    </div>
+    <button *ngIf='authorDetails' (click)='getAuthorRecentWorks()'>Show recent works</button>
+    <summary class='pt-15' *ngIf='authorWorks'>
+      <strong>Recent Works:</strong>
+      <ol *ngIf='authorWorks?.entries?.length > 0; else noData'>
+        <li *ngFor='let data of authorWorks?.entries'>{{ data?.title }}</li>
+      </ol>
+    </summary>
+  </summary>
+
+</form>
+
+<ng-template #noData>
+  <strong>NO DATA AVAILABLE</strong>
+</ng-template>
