@@ -1,5 +1,5 @@
 # SearchAuthors
-Hoolime SearchAuthors App
+SearchAuthors App
 
 To run this project first install node.
 <br>
