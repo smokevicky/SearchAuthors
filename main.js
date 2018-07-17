@@ -34,8 +34,8 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AUTHOR_API_ENDPOINTS", function() { return AUTHOR_API_ENDPOINTS; });
 var AUTHOR_API_ENDPOINTS = {
-    getAuthorSummary: 'http://openlibrary.org/authors/AUTHOR_CODE.json',
-    getAuthorWorkDetails: 'http://openlibrary.org/authors/AUTHOR_CODE/works.json'
+    getAuthorSummary: 'https://openlibrary.org/authors/AUTHOR_CODE.json',
+    getAuthorWorkDetails: 'https://openlibrary.org/authors/AUTHOR_CODE/works.json'
 };
 
 
